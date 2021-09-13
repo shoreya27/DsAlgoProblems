@@ -1,9 +1,9 @@
-def power_of_n(num, power):
+def power_of_n(base, power):
     assert power >= 0 and int(power) == power , "power should be greater than 0"
     if power == 0:
         return 1
     else:
-        return num * power_of_n(num, power-1)
+        return base * power_of_n(base, power-1)
     
 two_pow_seven = power_of_n(2, 7) #128
 print(two_pow_seven)
