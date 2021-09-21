@@ -24,4 +24,3 @@ space complexity is O(1) as we dont require any extra space
 print(searchElement(arr1, 11))
 print(searchElement(arr1, 15))
 print(searchElement(arr1, 13))
-
