@@ -27,3 +27,18 @@ print(newArrr)
 okarr = np.insert(arr,0,[[4,5,7]],1)
 print("Array after inserting a new row is:")
 print(okarr)
+
+#Accessing element in 2D Array
+'''
+Time complexity for accessing an element takes O(1) as array are efficient for this only
+Space Complexity is O(1) as this operation does not require any other operation space.
+'''
+def accessElement(arr, row, col):
+    if row >= len(arr) or col >= len(arr[0]):
+        print("wrong index provided")
+    else:
+        print(arr[row][col])
+
+accessElement(okarr,2,2)#8
+accessElement(okarr,3,1)#wrong index provided
+accessElement(okarr,1,4)#wrong index provided
