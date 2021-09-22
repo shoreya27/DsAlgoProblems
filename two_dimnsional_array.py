@@ -55,3 +55,19 @@ def traverArr(arr):
             print(arr[row][col], end=" ")
 
 traverArr(arr)
+print()
+
+'''
+Searching a value using linear search algo
+Time complexity is O(NM)
+Space complexity is O(1)
+It sequentially checks each element of the list until a match is found or the whole list has been searched.
+'''
+def SearchArr(arr, val):
+    for row in range(len(arr)):
+        for col in range(len(arr[0])):
+            if arr[row][col] == val:
+                return f"{val} is located at row:{row} and col:{col}"
+    return f"{val} doesnt exist in array"
+print(SearchArr(arr,4))
+print(SearchArr(arr,15))
