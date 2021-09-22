@@ -42,3 +42,16 @@ def accessElement(arr, row, col):
 accessElement(okarr,2,2)#8
 accessElement(okarr,3,1)#wrong index provided
 accessElement(okarr,1,4)#wrong index provided
+
+'''
+Array Traversal: visiting each object in array
+Time complexity is O(MN)
+space complexity is O(1)
+'''
+
+def traverArr(arr):
+    for row in range(len(arr)):
+        for col in range(len(arr[0])):
+            print(arr[row][col], end=" ")
+
+traverArr(arr)
