@@ -71,3 +71,16 @@ def SearchArr(arr, val):
     return f"{val} doesnt exist in array"
 print(SearchArr(arr,4))
 print(SearchArr(arr,15))
+
+
+print(arr)
+'''
+Deletion of row or column in 2D array
+Time complexity O(MN)
+Vry time consuming process
+'''
+
+new_delete_arr = np.delete(arr, 1 , axis=0)
+print(new_delete_arr)#1st index row gets deleted
+new_delete_arr = np.delete(arr, 1 , axis=1)
+print(new_delete_arr)#1st columns gets deleted but other columns shifted 1 step back
