@@ -40,3 +40,15 @@ cars = ["a", "b", "c"]
 trucks = ["A", "B"]
 cars.extend(trucks)
 print(cars)
+
+'''
+Deletion of elements from list
+>pop() ----> removes element from last index by default ------> O(n)|O(1)
+>remove() ----> remove the element by itself without knowing itself -------> O(n)
+>del() ----> removes the element from its index  ----n> O(n)
+'''
+books = [1,2,3,4,5]
+print(books.pop(0))
+print(books)# [2,3,4,5]
+print(books.remove(4))
+print(books)
