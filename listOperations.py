@@ -52,3 +52,14 @@ print(books.pop(0))
 print(books)# [2,3,4,5]
 print(books.remove(4))
 print(books)
+
+'''
+SEARCHING Operation in List
+>IN operator ----> takes O(n) works the same way as linear seach behind
+>Linear Search -----> takes O(n)
+'''
+myList = [10,400,800,1200,3000]
+if 10 in myList:
+    print("value present")
+else:
+    print("value not found!!!")
