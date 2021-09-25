@@ -15,3 +15,12 @@ while counter <= days:
 average = sum(temperatures)/len(temperatures)
 print(f"average temperature value is:{average}")
 
+'''
+Caculate how many days were above average
+'''
+dy = 0
+for i in temperatures:
+    if i > average:
+        dy += 1
+
+print(f"Total {dy} days were above avrage temperature!!")
