@@ -63,3 +63,22 @@ if 10 in myList:
     print("value present")
 else:
     print("value not found!!!")
+
+'''
+convert string to list of elments
+myString = "hey!whatsup??" -----> ['h','e','y','!']
+'''
+my_str = "hey!whatsupp??"
+print(list(my_str))
+
+'''
+split() --> convert string to list of words
+'''
+my_str = "nice meeting you shoreya"
+print(my_str.split())
+
+'''
+join() ---> list of values to string
+'''
+my_list = ["one", "x", "four", "is", "4"]
+print(' '.join(my_list))
