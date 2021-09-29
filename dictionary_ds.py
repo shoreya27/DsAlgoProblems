@@ -21,3 +21,12 @@ name = {"name":"shoreya",
         }
 for key in name:
     print(f"key:{key}, value:{name[key]}")
+'''
+Search a given value in 
+dictionary --- linear search
+Time complexity : O(n)
+space complexity: O(1)
+'''
+for key in name:
+    if name[key] == "shoreya":
+        print(key, name[key])
