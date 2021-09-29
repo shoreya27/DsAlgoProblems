@@ -36,7 +36,8 @@ Deletion in dictionary
 >pop()
 >popitem()
 >del keyword
-.clear method
+>clear method
+T = O(n)|O(1)
 '''
 items = {1:"mango", 2:"cream", 3:"herbs"}
 val = items.pop(3)
