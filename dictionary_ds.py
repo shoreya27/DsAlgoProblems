@@ -30,3 +30,17 @@ space complexity: O(1)
 for key in name:
     if name[key] == "shoreya":
         print(key, name[key])
+
+'''
+Deletion in dictionary
+>pop()
+>popitem()
+>del keyword
+.clear method
+'''
+items = {1:"mango", 2:"cream", 3:"herbs"}
+val = items.pop(3)
+print(val)
+print(items)
+del items[2]
+print(items)
