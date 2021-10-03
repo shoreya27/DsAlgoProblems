@@ -43,6 +43,17 @@ class SLinkedList:
         while start:
             print(start.value, end=" ")
             start = start.next
+    
+    def traversal(self):
+        '''
+        Traversing a SL
+        takes O(n) time complexity
+        and space complexity is O(1)
+        '''
+        start = self.head
+        while start:
+            print(start.value)
+            start = start.next
 
 singlyList = SLinkedList()
 #create 2 nodes
@@ -62,3 +73,7 @@ newSingly.insertion(41,'end')
 newSingly.insertion(21,'first')
 newSingly.insertion(15,4)
 newSingly.display()
+print()
+print("***************")
+newSingly.traversal()
+print("***************")
