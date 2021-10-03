@@ -54,6 +54,26 @@ class SLinkedList:
         while start:
             print(start.value)
             start = start.next
+    
+    '''
+    Searching value in
+    Linked List
+    '''
+    def search(self, value):
+        #check head
+        if not self.head:
+            print("Empty List")
+            return
+        start = self.head
+        index = 1
+        while start:
+            if start.value == value:
+                print(f"{value} is located at {index}")
+                return
+            start = start.next
+            index += 1
+        print(f"{value} is not present in list")
+        return
 
 singlyList = SLinkedList()
 #create 2 nodes
@@ -74,6 +94,10 @@ newSingly.insertion(21,'first')
 newSingly.insertion(15,4)
 newSingly.display()
 print()
-print("***************")
-newSingly.traversal()
-print("***************")
+# print("***************")
+# newSingly.traversal()
+# print("***************")
+print("........SEARCHING...........")
+newSingly.search(15)
+newSingly.search(41)
+newSingly.search(110)
