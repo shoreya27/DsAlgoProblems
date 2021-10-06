@@ -69,6 +69,20 @@ class CircularLinkedList:
             if start == self.head:
                 break
         print(" ]")
+    
+    def searching(self, val):
+        if not self.head:
+            print("Linked List is empty")
+        start = self.head
+        while True:
+            if start.value == val:
+                print(f"{val} exist in CLL")
+                return
+            start = start.next
+            if start == self.head:
+                break
+        print(f"{val} does not exist")
+        return 
 
 circular_ll = CircularLinkedList()
 circular_ll.create_ll(1)
@@ -89,3 +103,6 @@ new_circularr.create_ll(100)
 for i in range(99,0,-1):
     new_circularr.insertion(i,-1)
 new_circularr.traversal()
+new_circularr.searching(77)
+new_circularr.searching(150)
+new_circularr.searching(1)
