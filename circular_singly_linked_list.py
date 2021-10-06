@@ -57,6 +57,19 @@ class CircularLinkedList:
             start.next = node
         self.display()
 
+    def traversal(self):
+        if not self.head:
+            print("linked list is empty")
+            return
+        start = self.head
+        print("[ ")
+        while True:
+            print(start.value, end=" ")
+            start = start.next
+            if start == self.head:
+                break
+        print(" ]")
+
 circular_ll = CircularLinkedList()
 circular_ll.create_ll(1)
 circular_ll.display()
@@ -67,3 +80,12 @@ circular_ll.insertion(10,-1)
 #insert 2-9 in circular_ll
 for i in range(2,10):
     circular_ll.insertion(i,i)
+
+new_circularr = CircularLinkedList()
+# new_circularr.traversal()
+# new_circularr.insertion(0,0)
+new_circularr.create_ll(100)
+# new_circularr.traversal()
+for i in range(99,0,-1):
+    new_circularr.insertion(i,-1)
+new_circularr.traversal()
