@@ -115,6 +115,12 @@ class CircularLinkedList:
         self.display()
         return
         
+    def remove_entire_linkd_lst(self):
+        self.tail.next = None
+        self.head = None
+        self.tail = None
+        self.display()
+        return
 circular_ll = CircularLinkedList()
 circular_ll.create_ll(1)
 circular_ll.display()
@@ -143,3 +149,4 @@ print("-----------------------------")
 new_circularr.deletion(0)
 new_circularr.deletion(-1)
 new_circularr.deletion(10)
+new_circularr.remove_entire_linkd_lst()
