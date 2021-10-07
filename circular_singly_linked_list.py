@@ -84,6 +84,37 @@ class CircularLinkedList:
         print(f"{val} does not exist")
         return 
 
+    def deletion(self, loc):
+        if not self.head:
+            print("List is empty!")
+            return
+        if loc == 0:#beginning
+            if self.head.next == self.head:#only 1 element present
+                self.head = self.tail = None
+            else:
+                self.head = self.head.next
+                self.tail.next = self.head
+        elif loc == -1:#remove from the end
+            if self.head.next == self.head:#only 1 element present
+                self.head = self.tail = None
+            else:
+                start = self.head
+                while True:
+                    start = start.next
+                    if start.next == self.tail:
+                        break
+                start.next = self.head
+                self.tail = start
+        else:
+            start = self.head
+            count = 1
+            while count < loc-1:
+                start = start.next
+                count += 1
+            start.next = start.next.next
+        self.display()
+        return
+        
 circular_ll = CircularLinkedList()
 circular_ll.create_ll(1)
 circular_ll.display()
@@ -106,3 +137,9 @@ new_circularr.traversal()
 new_circularr.searching(77)
 new_circularr.searching(150)
 new_circularr.searching(1)
+print("-----------------------------")
+new_circularr.display()
+print("-----------------------------")
+new_circularr.deletion(0)
+new_circularr.deletion(-1)
+new_circularr.deletion(10)
