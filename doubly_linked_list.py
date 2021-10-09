@@ -95,6 +95,33 @@ class DoublyLinkedList:
         print(f"{nodeVal} is not there in the list")
         return
 
+    def deletion(self, loc):
+        if not self.head:
+            print("Linked List is empty")
+            return
+        if loc == 0:#delete from begining
+            if not self.head.next:#single node
+                self.head = self.tail = None
+            else:
+                self.head = self.head.next
+                self.head.prev = None
+        elif loc == -1:
+            if not self.head.next:#single node
+                self.head = self.tail = None
+            else:
+                self.tail = self.tail.prev
+                self.tail.next = None
+        else:
+            start = self.head
+            count = 1
+            while count < loc-1:
+                start = start.next
+                count += 1
+            start.next = start.next.next
+            start.next.prev = start
+        self.display()
+
+
 music = DoublyLinkedList()
 music.create(1)
 music.display()
@@ -112,3 +139,13 @@ music.reverse_traversal()
 
 music.searching(15)
 music.searching(150)
+
+books = DoublyLinkedList()
+books.deletion(1)
+books.create(10)
+for i in range(11,21):
+    books.insertion(i,-1)
+
+books.deletion(0)
+books.deletion(3)
+books.deletion(-1)
