@@ -73,6 +73,15 @@ class DoublyLinkedList:
             print(start.value)
             start = start.next
 
+    def reverse_traversal(self):
+        if not self.head:
+            print("Linked List is empty")
+            return
+        start = self.tail
+        while start:
+            print(start.value)
+            start = start.prev
+        
 
 music = DoublyLinkedList()
 music.create(1)
@@ -86,3 +95,5 @@ for i in range(6,50):
     music.insertion(i,i-1)
 
 music.traversal()
+print("-------------------Reversing----------------")
+music.reverse_traversal()
