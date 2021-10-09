@@ -64,6 +64,16 @@ class DoublyLinkedList:
         self.display()
         return
 
+    def traversal(self):
+        if not self.head:
+            print("List is empty!")
+            return
+        start = self.head
+        while start:
+            print(start.value)
+            start = start.next
+
+
 music = DoublyLinkedList()
 music.create(1)
 music.display()
@@ -74,3 +84,5 @@ music.insertion(3,3)
 music.insertion(50,-1)
 for i in range(6,50):
     music.insertion(i,i-1)
+
+music.traversal()
