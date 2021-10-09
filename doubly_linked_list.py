@@ -81,7 +81,19 @@ class DoublyLinkedList:
         while start:
             print(start.value)
             start = start.prev
-        
+    
+    def searching(self, nodeVal):
+        if not self.head:
+            print("list is empty")
+            return
+        start = self.head
+        while start:
+            if start.value == nodeVal:
+                print(f"{nodeVal} is present in list")
+                return
+            start = start.next
+        print(f"{nodeVal} is not there in the list")
+        return
 
 music = DoublyLinkedList()
 music.create(1)
@@ -97,3 +109,6 @@ for i in range(6,50):
 music.traversal()
 print("-------------------Reversing----------------")
 music.reverse_traversal()
+
+music.searching(15)
+music.searching(150)
