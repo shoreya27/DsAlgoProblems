@@ -121,6 +121,16 @@ class DoublyLinkedList:
             start.next.prev = start
         self.display()
 
+    def delete_complete_list(self):
+        if not self.head:
+            print("list is empty")
+            return
+        start = self.head
+        while start:
+            start.prev = None
+            start = start.next
+        self.head = None
+        self.tail = None
 
 music = DoublyLinkedList()
 music.create(1)
@@ -149,3 +159,6 @@ for i in range(11,21):
 books.deletion(0)
 books.deletion(3)
 books.deletion(-1)
+
+books.delete_complete_list()
+books.display()
