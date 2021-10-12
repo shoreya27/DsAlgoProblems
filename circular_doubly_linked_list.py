@@ -56,6 +56,17 @@ class CircularDoublyLinkedList:
             start.next.prev = node
             start.next = node
         self.display()
+    
+    def traversal(self):
+        if not self.head:
+            print("list is empty")
+            return
+        start = self.head
+        while start:
+            print(start.value)
+            if start == self.tail:
+                break
+            start = start.next
 
 songs = CircularDoublyLinkedList()
 songs.creation(1)
@@ -65,4 +76,5 @@ songs.insertion(100,-1)
 songs.insertion(2,3)
 for i in range(3,100):
     songs.insertion(i,i+1)
-    
+
+songs.traversal()
