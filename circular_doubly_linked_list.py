@@ -79,6 +79,19 @@ class CircularDoublyLinkedList:
                 break
             start = start.prev
 
+    def searching(self, nodeVal):
+        if not self.head:
+            print("list is empty")
+            return
+        start = self.head
+        while start:
+            if start.value == nodeVal:
+                print("element found")
+                return
+            if start == self.tail:
+                print("element does not exist")
+                return
+            start = start.next
 
 songs = CircularDoublyLinkedList()
 songs.creation(1)
@@ -91,3 +104,6 @@ for i in range(3,100):
 
 songs.traversal()
 songs.reverse_traversal()
+songs.searching(55)
+songs.searching(105)
+songs.searching(12)
