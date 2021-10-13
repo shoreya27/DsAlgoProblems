@@ -93,6 +93,39 @@ class CircularDoublyLinkedList:
                 return
             start = start.next
 
+    def deletion(self,loc):
+        if not self.head:
+            print("list is already empty")
+            return
+        if loc == 0:#from the begining
+            if self.head == self.tail:
+                self.head.next = None
+                self.head.prev = None
+                self.head = self.tail = None
+            else:
+                self.head = self.head.next
+                self.head.prev = self.tail
+                self.tail.next = self.head
+        elif loc == -1:#from the end
+            if self.head == self.tail:
+                self.head.next = None
+                self.head.prev = None
+                self.head = self.tail = None
+            else:
+                self.tail = self.tail.prev
+                self.tail.next = self.head
+                self.head.prev = self.tail
+        else:
+            start = self.head
+            count = 1
+            while count < loc-1:
+                start = start.next
+                count += 1
+            start.next = start.next.next
+            start.next.prev = start
+        self.display()
+        return
+
 songs = CircularDoublyLinkedList()
 songs.creation(1)
 songs.display()
@@ -107,3 +140,8 @@ songs.reverse_traversal()
 songs.searching(55)
 songs.searching(105)
 songs.searching(12)
+
+songs.deletion(1)
+songs.deletion(-1)
+songs.deletion(5)
+songs.deletion(10)
