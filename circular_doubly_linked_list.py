@@ -14,7 +14,8 @@ class CircularDoublyLinkedList:
     def __iter__(self):
         start = self.head
         while True:
-            yield start.value
+            if start:
+                yield start.value
             if start == self.tail:
                 break
             start = start.next
@@ -126,6 +127,19 @@ class CircularDoublyLinkedList:
         self.display()
         return
 
+    def delete_cdll(self):
+        if not self.head:
+            print("list is already empty!")
+            return
+        self.tail.next = None
+        start = self.head
+        while start:
+            start.prev = None
+            start = start.next
+        self.head = None
+        self.tail = None
+        self.display()
+
 songs = CircularDoublyLinkedList()
 songs.creation(1)
 songs.display()
@@ -145,3 +159,5 @@ songs.deletion(1)
 songs.deletion(-1)
 songs.deletion(5)
 songs.deletion(10)
+
+songs.delete_cdll()
