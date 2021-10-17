@@ -23,7 +23,7 @@ def remove_duplicates(lst):
             delete_node(temp,start)
         else:
             elements.add(start.value)
-        temp = start
+            temp = start
         start = start.next
 
 remove_duplicates(duplicate_lst)
@@ -48,3 +48,22 @@ dups3.add(5)
 print(dups3)
 remove_duplicates(dups3)
 print(dups3)
+
+
+dups4 = LinkedList()
+dups4.generate_random(5,10,25)
+print(dups4)
+remove_duplicates(dups4)
+print(dups4)
+
+
+
+dup6 = LinkedList()
+dup6.add(10)
+dup6.add(22)
+dup6.add(15)
+dup6.add(10)
+dup6.add(15)
+print(dup6)
+remove_duplicates(dup6)
+print(dup6)

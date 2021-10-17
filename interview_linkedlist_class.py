@@ -1,3 +1,4 @@
+import random
 class Node:
 
     def __init__(self, val) -> None:
@@ -37,3 +38,6 @@ class LinkedList:
             self.tail.next = node
             self.tail = node
 
+    def generate_random(self, total_elements ,minVal, maxVal):
+        for i in range(total_elements):
+            self.add(random.randint(minVal, maxVal))
