@@ -38,6 +38,14 @@ class LinkedList:
             self.tail.next = node
             self.tail = node
 
+    def add_node(self, node):
+        if not self.head:
+            self.head = node
+            self.tail = node
+        else:
+            self.tail.next = node
+            self.tail = node
+
     def generate_random(self, total_elements ,minVal, maxVal):
         for i in range(total_elements):
             self.add(random.randint(minVal, maxVal))
