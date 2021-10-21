@@ -25,7 +25,23 @@ class Stack:
             print(start.value)
             start = start.next
         return ""
+
+    def pop(self):
+        if self.isEmpty():
+            return "empty stack"
+
+        var = self.head.value
+        self.head = self.head.next
+        return var
+
 pages = Stack()
 pages.push(4)
 pages.push(10)
+pages.push(15)
+print(pages)
+print(pages.pop())
+# print(pages.pop())
+# print(pages.pop())
+print("......")
+# print(pages.pop())
 print(pages)
