@@ -34,6 +34,14 @@ class Stack:
         self.head = self.head.next
         return var
 
+    def delete(self):
+        self.head = None
+
+    def peek(self):
+        if self.isEmpty():
+            return "empty stack"
+        return self.head.value
+
 pages = Stack()
 pages.push(4)
 pages.push(10)
@@ -45,3 +53,5 @@ print(pages.pop())
 print("......")
 # print(pages.pop())
 print(pages)
+
+print(pages.peek())
