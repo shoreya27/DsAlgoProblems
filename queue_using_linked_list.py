@@ -29,6 +29,22 @@ class Queue:
             self.tail.next = node
             self.tail = node
     
+    def dequeue(self):
+        if self.isEmpty():
+            print("queue is empty")
+            return
+        val = self.head.value
+        self.head = self.head.next
+        return val
+    
+    def peek(self):
+        if self.isEmpty():
+            print("queue is empty")
+            return
+        return self.head.value
+    
+    def delete(self):
+        self.head = self.tail = None
 
 roll_no = Queue()
 # print(roll_no)
@@ -36,4 +52,20 @@ roll_no.enqueue(1)
 roll_no.enqueue(2)
 roll_no.enqueue(3)
 roll_no.enqueue(4)
+print(roll_no)
+
+print(f"1st roll no:{roll_no.dequeue()}")
+print(f"2nd roll no:{roll_no.dequeue()}")
+print(".............")
+print(roll_no)
+
+roll_no.enqueue(5)
+roll_no.enqueue(6)
+roll_no.enqueue(7)
+
+print(roll_no)
+
+print(roll_no.peek())
+
+roll_no.delete()
 print(roll_no)
