@@ -21,8 +21,8 @@ class CircularQueue:
     def enqueue(self, value):
         if self.isEmpty():
             self.list[0] = value
-            self.start += 1
-            self.top += 1
+            self.start = 0
+            self.top  = 0
         elif self.isFull():
             print("list is full")
         else:
@@ -60,10 +60,13 @@ order = CircularQueue(3)
 print(order)
 order.enqueue(5)
 print(order)
+print(order.start, order.top)
 order.enqueue(7)
 print(order)
+print(order.start, order.top)
 order.enqueue(9)
 print(order)
+print(order.start, order.top)
 order.enqueue(11)
 print(order)
 print(order.start, order.top)
@@ -80,8 +83,37 @@ print(order)
 print(order.start, order.top)
 print("3rd order:",order.dequeue())
 print(order)
-print(order.start, order.top)
+print(order.start, order.top)#0,1
 print("4th order:",order.dequeue())
+print(order)
+print(order.start, order.top)#1,1
 print("5th order:",order.dequeue())
 print(order)
+print(order.start, order.top)#2, 1
+order.enqueue(11)
 print(order.start, order.top)
+order.enqueue(12)
+print(order)
+print(".................ROUND.................")
+print(order.dequeue())
+print(order.enqueue(65))
+print(order)
+print(order.start, order.top)
+print(order.dequeue())
+print(order)
+print(order.start, order.top)
+print(order.enqueue(67))
+print(order.enqueue(48))
+print(order)
+print(order.start, order.top)
+
+print(order.dequeue())
+print(order.dequeue())
+print(order.dequeue())
+print(order.enqueue(17))
+
+print(order.enqueue(27))
+
+print(order.enqueue(37))
+print(order)
+print(order.peek())
