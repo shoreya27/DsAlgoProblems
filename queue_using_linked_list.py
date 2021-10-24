@@ -67,5 +67,12 @@ print(roll_no)
 
 print(roll_no.peek())
 
-roll_no.delete()
-print(roll_no)
+# roll_no.delete()
+# print(roll_no)
+
+roll_no.dequeue()
+roll_no.dequeue()
+roll_no.dequeue()
+roll_no.dequeue()
+roll_no.dequeue()
+roll_no.dequeue()
