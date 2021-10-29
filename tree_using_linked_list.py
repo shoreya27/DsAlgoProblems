@@ -24,16 +24,32 @@ def inorder_traversal(node):
     if not node:
         return
     inorder_traversal(node.left)
-    print(node.data)
+    print(node.data, end="-")
     inorder_traversal(node.right)
 
+print("*******INORDER TRAVERSAL***********")
 inorder_traversal(newNode)
+print()
+print("*********************************")
 
 def preorder_traversal(node):
     if not node:
         return
-    print(node.data)
+    print(node.data, end="->")
     preorder_traversal(node.left)
     preorder_traversal(node.right)
+print("----------POSTORDER------------------")
+preorder_traversal(newNode)
+print()
+print("*********************************")
 
-# preorder_traversal(newNode)
+
+def postorder_traversal(node):
+    if not node:
+        return
+    postorder_traversal(node.left)
+    postorder_traversal(node.right)
+    print(node.data)
+
+print("*********************************")
+postorder_traversal(newNode)
