@@ -20,6 +20,14 @@ left_child.right = coffee
 shake = TreeNode("shake")
 right_child.left = shake
 
+def inorder_traversal(node):
+    if not node:
+        return
+    inorder_traversal(node.left)
+    print(node.data)
+    inorder_traversal(node.right)
+
+inorder_traversal(newNode)
 
 def preorder_traversal(node):
     if not node:
@@ -28,4 +36,4 @@ def preorder_traversal(node):
     preorder_traversal(node.left)
     preorder_traversal(node.right)
 
-preorder_traversal(newNode)
+# preorder_traversal(newNode)
